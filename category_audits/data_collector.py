@@ -20,8 +20,8 @@ import time
 from datetime import datetime, timedelta
 from typing import Any, Dict, List, Optional
 
+import httpx
 from dotenv import load_dotenv
-from smartscout import SmartScoutAPIClient
 
 from .models import (
     AsinRecord,
@@ -63,13 +63,28 @@ def _gi(d: dict, key: str, default=0) -> int:
 
 
 class _SmartScoutRaw:
-    """Thin wrapper calling SmartScoutAPIClient._make_request directly.
+    """Direct httpx wrapper for SmartScout API.
 
+    The smartscout-api SDK is broken (Pydantic serialization, wrong base URL,
+    wrong auth header). We bypass it entirely and call the API directly.
+
+    Base URL: https://api.smartscout.com/api/v1
+    Auth: X-API-Key header (NOT Bearer token)
     Sort/page go in query params (bracket notation), filters go in JSON body.
     """
 
+    BASE_URL = "https://api.smartscout.com/api/v1"
+
     def __init__(self, api_key: str):
-        self._client = SmartScoutAPIClient(api_key=api_key)
+        self._api_key = api_key
+        self._client = httpx.Client(
+            headers={
+                "X-API-Key": api_key,
+                "Content-Type": "application/json",
+                "Accept": "application/json",
+            },
+            timeout=60,
+        )
 
     def post(
         self,
@@ -86,21 +101,32 @@ class _SmartScoutRaw:
             params["sort[order]"] = sort_order
         params["page[size]"] = page_size
 
+        url = f"{self.BASE_URL}{endpoint}"
+
         for attempt in range(3):
             try:
-                return self._client._make_request(
-                    "POST", endpoint, data=body, params=params
-                )
-            except Exception as e:
-                if "rate limit" in str(e).lower() or "429" in str(e):
+                resp = self._client.post(url, json=body, params=params)
+                resp.raise_for_status()
+                return resp.json()
+            except httpx.HTTPStatusError as e:
+                if e.response.status_code == 429:
                     wait = 2 ** (attempt + 1)
                     print(f"  Rate limited, waiting {wait}s (attempt {attempt + 1}/3)")
                     time.sleep(wait)
                 else:
                     raise
-        return self._client._make_request(
-            "POST", endpoint, data=body, params=params
-        )
+            except httpx.RequestError as e:
+                if attempt < 2:
+                    wait = 2 ** (attempt + 1)
+                    print(f"  Request error, retrying in {wait}s: {e}")
+                    time.sleep(wait)
+                else:
+                    raise
+
+        # Final attempt
+        resp = self._client.post(url, json=body, params=params)
+        resp.raise_for_status()
+        return resp.json()
 
 
 # ---------------------------------------------------------------------------

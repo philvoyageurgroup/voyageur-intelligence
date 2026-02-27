@@ -99,14 +99,18 @@ SmartScout API ──→ data_collector.py ──→ CategoryAuditData (dataclas
 | `prompts/` | Prompt templates — edit these to change report content/structure |
 | `prompts/styles/` | Alternative template styles (`ross` = numbered sections, `clean` = flat) |
 
-## SmartScout SDK Quirks (IMPORTANT)
+## SmartScout API (IMPORTANT — SDK is broken, we bypass it)
 
-The `smartscout-api` Python SDK has broken Pydantic serialization:
-- Enum values serialize as repr strings (`"TextFilterType.CONTAINS"` instead of `"contains"`)
-- Sort/page bracket aliases don't populate via constructor
-- Brand name filters silently fail
+The `smartscout-api` Python SDK (v0.1.1) is **completely broken**:
+- Wrong base URL (`/v1` → returns 404, correct is `/api/v1`)
+- Wrong auth header (`Authorization: Bearer` → returns 401, correct is `X-API-Key`)
+- Broken Pydantic serialization (enums serialize as repr strings, bracket aliases don't work)
 
-**Solution**: `data_collector.py` uses `_SmartScoutRaw` which calls `client._make_request()` directly with raw dicts. DO NOT try to use the SDK's model classes for filters — they don't work.
+**Solution**: `data_collector.py` uses `_SmartScoutRaw` which calls SmartScout directly via `httpx` — no SDK import at all. DO NOT try to use `SmartScoutAPIClient` or the SDK's model classes.
+
+- **Base URL:** `https://api.smartscout.com/api/v1`
+- **Auth header:** `X-API-Key: {your_key}`
+- **Timeout:** 60s (some endpoints are slow)
 
 Rate limiting: SmartScout limits aggressively. We use 1s delays between calls + retry with exponential backoff.
 
@@ -119,7 +123,7 @@ ANTHROPIC_API_KEY=...     # Anthropic/Claude API key
 
 ## What NOT to Do
 
-- **DO NOT use the SmartScout SDK model classes** for filters — they're broken. Use `_SmartScoutRaw`.
+- **DO NOT use `SmartScoutAPIClient` or the SDK** — it's broken (wrong URL, wrong auth). Use `_SmartScoutRaw` which calls the API directly via httpx.
 - **DO NOT use `requests` library** — use `httpx` (SSL issues on Windows with requests)
 - **DO NOT remove the `load_dotenv(override=True)`** — Claude Code sets empty ANTHROPIC_API_KEY in env, override=True is required
 - **DO NOT hardcode the Anthropic model** — it's configurable via `--model` flag
