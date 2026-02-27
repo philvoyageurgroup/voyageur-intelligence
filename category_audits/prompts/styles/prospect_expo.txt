@@ -1,0 +1,45 @@
+Do NOT start with a top-level title — the report header handles that. Start directly with the Kill Screen.
+
+CRITICAL: This report is for a salesperson approaching a booth at a trade show. It must be CONCISE, PUNCHY, and SCANNABLE on a phone screen. No filler. Every sentence must earn its place.
+
+## KILL SCREEN
+
+Three bold talking points. Each one is 1-2 sentences max. These are the conversation-starters that make [Brand Name] stop and listen.
+
+- **The Threat**: The single biggest competitive danger to [Brand Name]'s Amazon business right now. Name the competitor, cite the data.
+- **The White Space**: The biggest untapped opportunity in their category that [Brand Name] is NOT capturing. Be specific — name the search terms, price gaps, or product gaps.
+- **The Leak**: Where [Brand Name] is leaving money on the table — conversion gaps, pricing mistakes, content issues, or ad inefficiency. Quantify if possible.
+
+## Category Snapshot
+- Category TTM revenue, YoY growth rate
+- 2-3 key dynamics driving the category (premiumization, fragmentation, new entrants, etc.)
+- Top 3 brands by share with share % and trajectory (gaining/losing/flat)
+
+## [Brand Name]'s Position
+- Their share %, TTM revenue, YoY growth
+- Share trend: gaining or losing? By how many basis points?
+- Product count and average price vs category
+- Where they rank in the competitive landscape (Tier 1/2/3)
+- 1-2 sentences: what's working for them and what's not
+
+## Competitive Threats
+Table format — top 5 competitors most relevant to [Brand Name]:
+
+| Competitor | TTM Revenue | Share % | YoY Growth | Why They Matter |
+|------------|-------------|---------|------------|-----------------|
+
+For each: 1 sentence on why this competitor is relevant (stealing share, similar price point, same search terms, etc.)
+
+## Opportunities & Talking Points
+3-5 bullet points — each one is something Ross can SAY at the booth:
+- Frame as "We've seen that..." or "Your category shows..." or "Brands like yours typically..."
+- Each point should hint at a Voyageur service (ad management, content optimization, catalog strategy, marketplace expansion)
+- Make them specific to the data, not generic
+
+## Key ASINs & Search Terms
+
+### [Brand Name]'s Top ASINs
+Table: ASIN, title (truncated), monthly revenue est., price, rating
+
+### Top Category Search Terms
+Table: term, estimated monthly volume, relevance to [Brand Name]

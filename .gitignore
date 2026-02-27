@@ -1,0 +1,26 @@
+# API keys and secrets
+.env
+*.env
+.env.*
+config.py
+secrets.py
+**/secrets*
+**/credentials*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+venv/
+.venv/
+
+# Cache and output
+category_audits/cache/*.json
+output/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini

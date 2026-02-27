@@ -1,0 +1,71 @@
+Use numbered sections with sub-sections (e.g., 2.1, 4.2) exactly like a consulting report. Do NOT start with a top-level title — the cover page handles that. Start directly with section 1.
+
+## 1) Executive Summary: What's Happening and Why It Matters
+- 3-4 bullet points: category growth rate, structural forces, and why [retailer] should care
+- End with: "A [retailer] buyer should care because..." paragraph
+
+## 2) Category Structure: Where the Dollars Are
+
+### 2.1 Category mix
+Subcategory breakdown with annualized revenue and growth rates. Use a table if >5 subcategories.
+
+### 2.2 Where growth is actually concentrated
+- Largest dollar pools with YoY %
+- Fast growth pockets (large enough to matter)
+- "[Retailer] insight:" paragraph connecting this to their assortment decisions
+
+## 3) Price & Premiumization
+
+### 3.1 Revenue vs units by price band
+Break into bands (<$10, $10-25, $25-50, $50-75, $75-100, $100+) showing revenue share AND unit share for each. Identify the barbell.
+
+### 3.2 Key takeaway
+What % of revenue is now premium tier? What does this mean for [retailer]'s assortment architecture?
+
+## 4) Competitive Landscape
+
+### 4.1 Largest brands (TTM size + YoY)
+Top 5-10 brands: TTM $, YoY %, share %. Note which are growing faster or slower than the category.
+
+### 4.2 Share shift math: who is gaining and losing share (pp)
+Computed as: (Brand share TTM) - (Brand share prior 12 months)
+
+**Largest share gainers (>=meaningful TTM):**
+Numbered list: brand, TTM $, YoY %, share delta in pp, one-line on what's driving it
+
+**Largest share decliners:**
+Same format. End with "What this means for [retailer]:" paragraph.
+
+## 5) ASIN-Level Exhibits
+
+### 5.1 Largest revenue ASINs (category anchors)
+Top 5-8 hero ASINs with monthly/annual revenue, growth %, brand
+
+### 5.2 "Big + Fast" breakouts (>=significant TTM and >=50% YoY)
+Products foreshadowing shelf pressure. For each: ASIN or product name, TTM $, YoY %, launch year, why it matters.
+
+"[Retailer] insight:" paragraph at the end.
+
+## 6) Brands to Watch: [Retailer] Relevance
+
+### Tier 1: Already meaningful scale + gaining share
+For each brand (3-5 brands):
+- TTM $, YoY %, share delta (pp)
+- What's driving it (1-2 sentences)
+- "[Retailer]-fit hypothesis:" — specific suggestion for how [retailer] could engage
+
+### Tier 2: High growth, earlier scale, strong concept signal
+Same format, 3-5 brands. These are "build a relationship now" brands.
+
+## 7) Search & Demand Signals
+- Top search themes from the data
+- Where consumer demand is running ahead of current assortment
+- White space opportunities [retailer] could fill
+
+## 8) Implications for [Retailer]
+4-5 numbered strategic insights. Each one ends with "Implication for [retailer]:" making it concrete and actionable.
+
+## 9) Summary: What Should [Retailer] Be Looking For?
+- Trend watch list (3-5 structural trends)
+- Brand watch list (the names to track)
+- End with a clear "next step" recommendation

@@ -1,0 +1,51 @@
+Use numbered sections with sub-sections (e.g., 2.1, 2.2) exactly like a consulting report. Do NOT start with a top-level title — the cover page handles that. Start directly with section 1.
+
+## 1) Brand Overview
+- Revenue scale (TTM $), subcategory rank, 12-month trajectory
+- Category context: total category TTM, brand's share %, where they sit vs top 5
+
+## 2) Share Trend & Competitive Position
+
+### 2.1 Share math
+- TTM share vs prior 12-month share: exact basis points gained or lost
+- Context: is the category growing faster than the brand? (if category +X% and brand +Y%, what does that mean for share?)
+
+### 2.2 Competitive positioning
+- Which specific competitors are gaining ground and why
+- Which competitors are losing ground and why
+- Where does this brand sit in the "big and growing" vs "big but losing share" matrix?
+
+## 3) ASIN Portfolio Deep Dive
+
+### 3.1 Hero SKUs
+Top 3-5 ASINs: ASIN, title, monthly revenue, units, price, rating, review count, lifecycle stage (launch date if visible)
+
+### 3.2 Portfolio health
+- Review moat strength: which SKUs have deep review counts (500+) vs thin (<100)?
+- Price architecture: how are their SKUs distributed across price bands?
+- Lifecycle: which are mature cash cows, which are scaling launches, which are declining?
+
+### 3.3 Content & conversion quality
+- Page scores if available, imagery quality signals, A+ presence
+- How does their content compare to top competitors?
+
+## 4) Search Term Ownership
+
+### 4.1 Terms they likely win
+Top search terms where this brand's products appear strongly
+
+### 4.2 Gaps
+Search terms where competitors capture demand that this brand should own
+
+### 4.3 White space opportunities
+Under-served search angles this brand could claim
+
+## 5) Competitive Threats
+2-3 specific brands encroaching on their space:
+- For each: name, TTM $, growth rate, share delta, what they're doing differently, why it's a threat
+
+## 6) Recommended Focus Areas
+3-5 concrete moves, prioritized by impact. Each one:
+- What to do (specific)
+- Why it matters (tied to data above)
+- Expected impact (directional)

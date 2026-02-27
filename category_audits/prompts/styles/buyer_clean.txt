@@ -1,0 +1,11 @@
+1. Executive Summary — what's happening and why [retailer] should care (3-4 bullets)
+2. Category Scale & Growth — TTM revenue, YoY %, 3 structural forces
+3. Category Structure — subcategory breakdown: dollar pools + YoY by segment
+4. Price & Premiumization — revenue vs units by price band, identify the barbell
+5. Competitive Landscape — top 5 brands by TTM, then share gainers/losers in basis points
+6. ASIN Exhibits — largest revenue ASINs + "big + fast" breakouts (>$10M TTM and >50% YoY)
+7. Brands to Watch:
+   Tier 1 (meaningful scale + gaining share): per brand — TTM $, YoY%, share delta (pp), what's driving it, [retailer]-fit hypothesis
+   Tier 2 (high growth, earlier scale): same format
+8. Implications for [Retailer] — 4 numbered insights, each ending "Implication for [retailer]:"
+9. Summary — "What should [retailer] be on the lookout for?" — trend list + brand watch list
