@@ -1,7 +1,7 @@
 # API keys and secrets
 .env
-*.env
 .env.*
+!.env.example
 config.py
 secrets.py
 **/secrets*
