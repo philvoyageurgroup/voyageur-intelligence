@@ -71,20 +71,36 @@ class _SmartScoutRaw:
     Base URL: https://api.smartscout.com/api/v1
     Auth: X-API-Key header (NOT Bearer token)
     Sort/page go in query params (bracket notation), filters go in JSON body.
+
+    When USE_SMARTSCOUT_QUEUE=true, routes through the centralized worker
+    on the 3090 via Supabase queue instead of calling SmartScout directly.
     """
 
     BASE_URL = "https://api.smartscout.com/api/v1"
 
     def __init__(self, api_key: str):
         self._api_key = api_key
-        self._client = httpx.Client(
-            headers={
-                "X-API-Key": api_key,
-                "Content-Type": "application/json",
-                "Accept": "application/json",
-            },
-            timeout=60,
-        )
+        self._use_queue = os.getenv("USE_SMARTSCOUT_QUEUE", "").lower() == "true"
+        self._queue_client = None
+
+        if not self._use_queue:
+            self._client = httpx.Client(
+                headers={
+                    "X-API-Key": api_key,
+                    "Content-Type": "application/json",
+                    "Accept": "application/json",
+                },
+                timeout=60,
+            )
+
+    def _get_queue(self):
+        if self._queue_client is None:
+            from .queue_client import SmartScoutQueueClient
+            self._queue_client = SmartScoutQueueClient(
+                requested_by=os.getenv("SMARTSCOUT_QUEUE_USER", "phil-auto"),
+                priority=int(os.getenv("SMARTSCOUT_QUEUE_PRIORITY", "1"))
+            )
+        return self._queue_client
 
     def post(
         self,
@@ -100,6 +116,16 @@ class _SmartScoutRaw:
             params["sort[by]"] = sort_by
             params["sort[order]"] = sort_order
         params["page[size]"] = page_size
+
+        # Route through centralized worker queue if enabled
+        if self._use_queue:
+            return self._get_queue().request(
+                method="POST",
+                endpoint=endpoint,
+                params=params,
+                payload=body,
+                user_intent=f"SmartScout {endpoint} for {marketplace}"
+            )
 
         url = f"{self.BASE_URL}{endpoint}"
 
