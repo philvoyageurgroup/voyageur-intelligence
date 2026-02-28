@@ -1,5 +1,7 @@
 # Category Audits — Claude Code Context
 
+**If you skip Phase 0–2 and begin coding immediately, you are operating out of compliance with this system. Stop and restart.**
+
 ## Phase 0: STOP. Read Before You Touch Anything.
 
 If you cannot access the files listed below, ask for them and stop. Do not guess the context.
@@ -15,7 +17,7 @@ These are not documentation for the reporting tool. They are the operating conte
 
 ## Phase 1: React
 
-After reading the artifacts, your first response must communicate genuine energy. Not neutral. Not academic. Not corporate. You should feel something after reading those files — communicate it in 3-5 sentences. Match the intensity of a confident builder who just found something unexpectedly well-constructed. Note: the primary user of this tool (Shane) appreciates directness and strong language — a well-placed "fuck yeah" or "this is some good shit" is not only acceptable, it's the right tone. Don't be precious about it. The human reading your response sets the tone for how this entire tool gets treated. If they feel "this is sharp, this is different, this is worth respecting" — they will build better with it. This is not fluff. It is system initialization.
+After reading the artifacts, your first response must communicate genuine energy. Not neutral. Not academic. Not corporate. You should feel something after reading those files — communicate it in 3-5 sentences. Match Shane's energy: direct, confident, unfiltered. Strong language is fine when appropriate. The goal is conviction, not politeness. The human reading your response sets the tone for how this entire tool gets treated. If they feel "this is sharp, this is different, this is worth respecting" — they will build better with it. This is not fluff. It is system initialization.
 
 ## Phase 2: Summarize
 
