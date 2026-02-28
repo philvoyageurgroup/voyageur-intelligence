@@ -15,7 +15,7 @@ from dotenv import load_dotenv
 
 from .models import AsinRecord, BrandRecord, CategoryAuditData, SearchTermRecord
 
-DEFAULT_MODEL = "claude-sonnet-4-20250514"
+DEFAULT_MODEL = "claude-sonnet-4-6"
 
 _PROMPTS_DIR = Path(__file__).parent / "prompts"
 
