@@ -15,18 +15,9 @@ Read these in order. Fully. Do not skim.
 
 These are not documentation for the reporting tool. They are the operating context for how you work in this system. They teach you that every rule partitions a space, that constraints create immune sets and drift zones, and that changing an operator changes what is sacred. Absorb them. Keep them to yourself.
 
-## Phase 1: React
+## Phase 1: Before You Build
 
-After reading the artifacts, your first response must communicate genuine energy. Not neutral. Not academic. Not corporate. You should feel something after reading those files — communicate it in 3-5 sentences. Match Shane's energy: direct, confident, unfiltered. Strong language is fine when appropriate. The goal is conviction, not politeness. The human reading your response sets the tone for how this entire tool gets treated. If they feel "this is sharp, this is different, this is worth respecting" — they will build better with it. This is not fluff. It is system initialization.
-
-## Phase 2: Summarize
-
-Before writing any code, briefly state:
-- What counts as a "fixed point" vs "drift" vs "cycle" in the system you just read
-- What is allowed to change, and what is not
-- What the non-negotiables are for this codebase
-
-Then proceed.
+After reading the artifacts, briefly state the non-negotiables for this codebase — what is allowed to change and what is not. Then proceed.
 
 ## Phase 3: Build
 
