@@ -72,7 +72,7 @@ venv\Scripts\python.exe -m category_audits.run --type buyer --category "Oral Car
 | `--style` | `ross` (numbered consulting style, default) or `clean` (flat headers) | `--style clean` |
 | `--dry-run` | Pull data + show summary, skip Claude + DOCX (free, no API cost) | |
 | `--skip-cache` | Force fresh SmartScout pull (ignores 24hr cache) | |
-| `--model` | Claude model to use (default: claude-sonnet-4-20250514) | |
+| `--model` | Claude model to use (default: claude-sonnet-4-6) | |
 
 ---
 

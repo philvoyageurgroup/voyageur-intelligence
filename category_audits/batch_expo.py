@@ -196,7 +196,7 @@ def main():
         help="Output directory for HTML reports"
     )
     parser.add_argument(
-        "--model", type=str, default="claude-sonnet-4-20250514",
+        "--model", type=str, default="claude-sonnet-4-6",
         help="Claude model for analysis"
     )
     parser.add_argument(
